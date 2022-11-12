@@ -15,6 +15,10 @@ import { deleteTodoItem } from './todosAcess';
 
 export function todoBuilder(todoRequest: CreateTodoRequest, event: APIGatewayProxyEvent): TodoItem {
     const todoId = uuid.v4()
+
+    if (todoRequest.name.length <= 0){
+      return null
+    }
     const todo = {
 
       todoId: todoId,
