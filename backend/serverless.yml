@@ -116,6 +116,7 @@ functions:
       - http:
           method: delete
           path: todos/{todoId}
+          cors: true
     iamRoleStatements:
     - Effect: Allow
       Action:
